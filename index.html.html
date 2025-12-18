@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Гладкая Ты — Студия лазерной эпиляции и омоложения</title>
+    <!-- Favicon для браузера -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/logo.jpg"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/logo.jpg"
+    />
+
+    <!-- Опционально: .ico для старых браузеров -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo1.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Гладкая Ты — Студия лазерной эпиляции. Гагарина 1. Запись: +7 (988) 189-98-21"
+    />
+    <meta name="keywords" content="эпиляция, омоложения" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="root" class="pd-167">
+      <div
+        class="min-h-screen bg-gradient-to-br from-purple-100 via-white to-purple-50"
+      >
+        <!-- Navbar -->
+        <nav
+          class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm"
+        >
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+              <!-- Левый блок: логотип -->
+              <div class="flex items-center">
+                <span
+                  class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent"
+                  style="font-family: 'PF Scandal Pro Bold', sans-serif"
+                >
+                  Гладкая Ты
+                </span>
+              </div>
+
+              <!-- Меню для ПК -->
+              <div class="hidden md:flex space-x-8">
+                <a
+                  href="#home"
+                  class="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors whitespace-nowrap"
+                  >Главная</a
+                >
+                <a
+                  href="#about"
+                  class="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors whitespace-nowrap"
+                  >О нас</a
+                >
+                <a
+                  href="#prices"
+                  class="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors whitespace-nowrap"
+                  >Прайс-лист</a
+                >
+                <a
+                  href="#certificates"
+                  class="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors whitespace-nowrap"
+                  >Сертификаты</a
+                >
+                <a
+                  href="#contacts"
+                  class="text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors whitespace-nowrap"
+                  >Контакты</a
+                >
+              </div>
+
+              <!-- Бургер меню для мобилки -->
+              <button
+                id="burger"
+                class="md:hidden text-purple-600 cursor-pointer z-50 relative"
+              >
+                <i class="ri-menu-line text-2xl"></i>
+              </button>
+              <!-- Мобильное меню -->
+              <div
+                id="mobileMenu"
+                class="fixed top-16 right-4 w-56 bg-white rounded-lg shadow-lg flex flex-col space-y-4 p-6 opacity-0 scale-95 pointer-events-none transform transition-all duration-300 md:hidden z-40"
+              >
+                <a
+                  href="#home"
+                  class="text-gray-700 hover:text-purple-600"
+                  onclick="closeMenu()"
+                  >Главная</a
+                >
+                <a
+                  href="#about"
+                  class="text-gray-700 hover:text-purple-600"
+                  onclick="closeMenu()"
+                  >О нас</a
+                >
+                <a
+                  href="#prices"
+                  class="text-gray-700 hover:text-purple-600"
+                  onclick="closeMenu()"
+                  >Прайс-лист</a
+                >
+                <a
+                  href="#certificates"
+                  class="text-gray-700 hover:text-purple-600"
+                  onclick="closeMenu()"
+                  >Сертификаты</a
+                >
+                <a
+                  href="#contacts"
+                  class="text-gray-700 hover:text-purple-600"
+                  onclick="closeMenu()"
+                  >Контакты</a
+                >
+              </div>
+              <script>
+                const burger = document.getElementById("burger");
+                const mobileMenu = document.getElementById("mobileMenu");
+
+                function openMenu() {
+                  mobileMenu.classList.remove(
+                    "opacity-0",
+                    "scale-95",
+                    "pointer-events-none"
+                  );
+                  mobileMenu.classList.add("opacity-100", "scale-100");
+                }
+
+                function closeMenu() {
+                  mobileMenu.classList.remove("opacity-100", "scale-100");
+                  mobileMenu.classList.add(
+                    "opacity-0",
+                    "scale-95",
+                    "pointer-events-none"
+                  );
+                }
+
+                burger.addEventListener("click", () => {
+                  if (mobileMenu.classList.contains("opacity-0")) {
+                    openMenu();
+                  } else {
+                    closeMenu();
+                  }
+                });
+              </script>
+            </div>
+          </div>
+        </nav>
+        <!-- Home Section -->
+        <div id="home">
+          <section
+            class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-purple-600 via-purple-400 to-white"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-purple-900/20"
+              ></div>
+            </div>
+            <div
+              class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto"
+            >
+              <div class="mb-8 flex justify-center">
+                <div class="relative w-64 h-64 sm:w-80 sm:h-80">
+                  <!-- Круглая картинка -->
+                  <div
+                    class="absolute inset-0 rounded-full overflow-hidden flex items-center justify-center"
+                  >
+                    <img
+                      src="assets/images/logo.jpg"
+                      alt="Гладкая Ты"
+                      class="w-full h-full object-cover rounded-full"
+                    />
+                  </div>
+                  <!-- Текст поверх картинки с кастомным шрифтом -->
+                  <div
+                    class="absolute inset-0 flex flex-col items-center justify-center text-center"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Подключение шрифта локально -->
+              <style>
+                @font-face {
+                  font-family: "PF Scandal Pro Bold";
+                  src: url("assets/fonts/PFScandalProBold.otf")
+                    format("opentype");
+                  font-weight: bold;
+                  font-style: normal;
+                }
+              </style>
+              <h2 class="text-2xl sm:text-3xl font-semibold text-white mb-4">
+                Студия лазерной эпиляции
+              </h2>
+              <p
+                class="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto"
+              >
+                Профессиональный уход за вашей красотой. Современные технологии
+                и индивидуальный подход к каждому клиенту.
+              </p>
+              <div
+                class="flex flex-col sm:flex-row gap-4 justify-center items-center"
+              >
+                <a
+                  href="#prices"
+                  class="px-8 py-3 bg-white text-purple-600 rounded-full font-semibold hover:bg-purple-50 transition-all shadow-lg hover:shadow-xl whitespace-nowrap cursor-pointer inline-block"
+                >
+                  Посмотреть прайс
+                </a>
+                <a
+                  href="#contacts"
+                  class="px-8 py-3 bg-purple-800 text-white rounded-full font-semibold hover:bg-purple-900 transition-all shadow-lg hover:shadow-xl whitespace-nowrap cursor-pointer inline-block"
+                >
+                  Записаться
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- About Section -->
+        <div id="about">
+          <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-6xl mx-auto">
+              <div class="text-center mb-16">
+                <h2
+                  class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-4"
+                >
+                  О нашей студии
+                </h2>
+                <div
+                  class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto rounded-full"
+                ></div>
+              </div>
+              <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                  <div
+                    class="aspect-square rounded-2xl overflow-hidden shadow-2xl"
+                  >
+                    <img
+                      alt="Салон красоты Гладкая Ты"
+                      class="w-full h-full object-cover"
+                      src="assets/images/salon.jpg"
+                    />
+                  </div>
+                </div>
+                <div class="space-y-6">
+                  <p class="text-lg text-gray-700 leading-relaxed">
+                    <strong class="text-purple-600"
+                      >Салон красоты "Гладкая Ты"</strong
+                    >
+                    — это современное пространство, где профессионализм
+                    встречается с заботой о каждом клиенте. Мы специализируемся
+                    на услугах эпиляции и комплексном уходе за кожей.
+                  </p>
+                  <p class="text-lg text-gray-700 leading-relaxed">
+                    Наши мастера регулярно проходят обучение и используют только
+                    проверенные методики и качественные материалы. Мы создали
+                    атмосферу, где вы можете расслабиться и довериться
+                    профессионалам.
+                  </p>
+                  <!-- Stats -->
+                  <div class="grid grid-cols-2 gap-6 pt-6">
+                    <div
+                      class="text-center p-6 bg-gradient-to-br from-purple-50 to-white rounded-xl shadow-md"
+                    >
+                      <div
+                        class="w-12 h-12 flex items-center justify-center mx-auto mb-3"
+                      >
+                        <i class="ri-award-line text-4xl text-purple-600"></i>
+                      </div>
+                      <h3 class="text-2xl font-bold text-purple-600 mb-1">
+                        5+
+                      </h3>
+                      <p class="text-sm text-gray-600">лет опыта</p>
+                    </div>
+                    <div
+                      class="text-center p-6 bg-gradient-to-br from-purple-50 to-white rounded-xl shadow-md"
+                    >
+                      <div
+                        class="w-12 h-12 flex items-center justify-center mx-auto mb-3"
+                      >
+                        <i
+                          class="ri-user-heart-line text-4xl text-purple-600"
+                        ></i>
+                      </div>
+                      <h3 class="text-2xl font-bold text-purple-600 mb-1">
+                        1000+
+                      </h3>
+                      <p class="text-sm text-gray-600">довольных клиентов</p>
+                    </div>
+                  </div>
+                  <!-- Features -->
+                  <div class="pt-6 space-y-4">
+                    <div class="flex items-start gap-3">
+                      <div
+                        class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i
+                          class="ri-checkbox-circle-fill text-xl text-purple-600"
+                        ></i>
+                      </div>
+                      <p class="text-gray-700">
+                        <strong>Современное оборудование</strong> для безопасных
+                        и эффективных процедур
+                      </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div
+                        class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i
+                          class="ri-checkbox-circle-fill text-xl text-purple-600"
+                        ></i>
+                      </div>
+                      <p class="text-gray-700">
+                        <strong>Сертифицированные мастера</strong> с многолетним
+                        опытом работы
+                      </p>
+                    </div>
+                    <div class="flex items-start gap-3">
+                      <div
+                        class="w-6 h-6 flex items-center justify-center flex-shrink-0 mt-1"
+                      >
+                        <i
+                          class="ri-checkbox-circle-fill text-xl text-purple-600"
+                        ></i>
+                      </div>
+                      <p class="text-gray-700">
+                        <strong>Индивидуальный подход</strong> к каждому клиенту
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Prices Section -->
+        <div id="prices">
+          <section
+            class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-purple-50"
+          >
+            <div class="max-w-7xl mx-auto">
+              <div class="text-center mb-16">
+                <h2
+                  class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-4"
+                >
+                  Прайс-лист
+                </h2>
+                <div
+                  class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto rounded-full mb-6"
+                ></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Мы предлагаем широкий спектр услуг по доступным ценам. Все
+                  процедуры выполняются профессиональными мастерами с
+                  использованием качественных материалов.
+                </p>
+              </div>
+              <div class="grid md:grid-cols-2 gap-8">
+                <!-- Эпиляция -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                >
+                  <div
+                    class="bg-gradient-to-r from-purple-600 to-purple-400 p-6"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-white/20 rounded-xl"
+                      >
+                        <i class="ri-scissors-line text-3xl text-white"></i>
+                      </div>
+                      <h3 class="text-2xl font-bold text-white">Эпиляция</h3>
+                    </div>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция ног полностью</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >2500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция голени</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1200 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция бедер</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция рук полностью</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1800 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция подмышек</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >600 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция бикини классическое</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1000 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция бикини глубокое</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Эпиляция лица</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >800 ₽</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Уход за лицом -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                >
+                  <div
+                    class="bg-gradient-to-r from-purple-600 to-purple-400 p-6"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-white/20 rounded-xl"
+                      >
+                        <i class="ri-heart-pulse-line text-3xl text-white"></i>
+                      </div>
+                      <h3 class="text-2xl font-bold text-white">
+                        Уход за лицом
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Чистка лица комплексная</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >2500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium">Пилинг лица</span>
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1800 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium">Массаж лица</span>
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Маска для лица</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1200 ₽</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Маникюр и педикюр -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                >
+                  <div
+                    class="bg-gradient-to-r from-purple-600 to-purple-400 p-6"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-white/20 rounded-xl"
+                      >
+                        <i class="ri-hand-heart-line text-3xl text-white"></i>
+                      </div>
+                      <h3 class="text-2xl font-bold text-white">
+                        Маникюр и педикюр
+                      </h3>
+                    </div>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Маникюр классический</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1200 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Маникюр аппаратный</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Покрытие гель-лак</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >800 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Педикюр классический</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >1800 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Педикюр аппаратный</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >2000 ₽</span
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- Массаж -->
+                <div
+                  class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                >
+                  <div
+                    class="bg-gradient-to-r from-purple-600 to-purple-400 p-6"
+                  >
+                    <div class="flex items-center gap-4">
+                      <div
+                        class="w-12 h-12 flex items-center justify-center bg-white/20 rounded-xl"
+                      >
+                        <i class="ri-hand-coin-line text-3xl text-white"></i>
+                      </div>
+                      <h3 class="text-2xl font-bold text-white">Массаж</h3>
+                    </div>
+                  </div>
+                  <div class="p-6 space-y-4">
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Массаж спины</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >2000 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Массаж всего тела</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >3500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Антицеллюлитный массаж</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >2500 ₽</span
+                      >
+                    </div>
+                    <div
+                      class="flex justify-between items-center pb-4 border-b border-gray-100"
+                    >
+                      <span class="text-gray-700 font-medium"
+                        >Лимфодренажный массаж</span
+                      >
+                      <span
+                        class="text-purple-600 font-bold text-lg whitespace-nowrap ml-4"
+                        >2800 ₽</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-12 text-center">
+                <div
+                  class="inline-block bg-purple-50 rounded-2xl p-6 shadow-md"
+                >
+                  <p class="text-gray-700 mb-2">
+                    <i class="ri-information-line text-purple-600 mr-2"></i>Цены
+                    указаны в рублях. Возможны сезонные акции и специальные
+                    предложения.
+                  </p>
+                  <p class="text-gray-600 text-sm">
+                    Для уточнения стоимости и записи на процедуру свяжитесь с
+                    нами по телефону или через WhatsApp
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Certificates Section -->
+        <div id="certificates">
+          <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div class="max-w-7xl mx-auto">
+              <!-- Header -->
+              <div class="text-center mb-16">
+                <h2
+                  class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-4"
+                >
+                  Сертификаты и квалификация
+                </h2>
+                <div
+                  class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto rounded-full mb-6"
+                ></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Наши специалисты имеют все необходимые сертификаты и регулярно
+                  повышают свою квалификацию, чтобы предоставлять вам услуги
+                  высочайшего качества.
+                </p>
+              </div>
+              <!-- Certificates Grid -->
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Certificate 1 -->
+                <div class="group cursor-pointer">
+                  <div
+                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                  >
+                    <div class="aspect-[4/5] w-full h-full">
+                      <img
+                        alt="Сертификат косметолога"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        src="assets/images/cert-1.jpg"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+                    >
+                      <div class="p-6 text-white">
+                        <h3 class="text-lg font-bold mb-2">
+                          Сертификат косметолога
+                        </h3>
+                        <p class="text-sm text-white/90">
+                          Профессиональная подготовка по косметологии
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-center">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Сертификат косметолога
+                    </h3>
+                    <p class="text-sm text-gray-600">
+                      Профессиональная подготовка по косметологии
+                    </p>
+                  </div>
+                </div>
+                <!-- Certificate 2 -->
+                <div class="group cursor-pointer">
+                  <div
+                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                  >
+                    <div class="aspect-[4/5] w-full h-full">
+                      <img
+                        alt="Сертификат по эпиляции"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        src="assets/images/cert-2.jpg"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+                    >
+                      <div class="p-6 text-white">
+                        <h3 class="text-lg font-bold mb-2">
+                          Сертификат по эпиляции
+                        </h3>
+                        <p class="text-sm text-white/90">
+                          Специализация по современным методам эпиляции
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-center">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Сертификат по эпиляции
+                    </h3>
+                    <p class="text-sm text-gray-600">
+                      Специализация по современным методам эпиляции
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="group cursor-pointer">
+                  <div
+                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                  >
+                    <div class="aspect-[4/5] w-full h-full">
+                      <img
+                        alt="Сертификат массажиста"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        src="assets/images/cert-3.jpg"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+                    >
+                      <div class="p-6 text-white">
+                        <h3 class="text-lg font-bold mb-2">
+                          Сертификат массажиста
+                        </h3>
+                        <p class="text-sm text-white/90">
+                          Квалификация по различным видам массажа
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-center">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Сертификат массажиста
+                    </h3>
+                    <p class="text-sm text-gray-600">
+                      Квалификация по различным видам массажа
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="group cursor-pointer">
+                  <div
+                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                  >
+                    <div class="aspect-[4/5] w-full h-full">
+                      <img
+                        alt="Повышение квалификации"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                        src="assets/images/cert-4.jpg"
+                      />
+                    </div>
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+                    >
+                      <div class="p-6 text-white">
+                        <h3 class="text-lg font-bold mb-2">
+                          Повышение квалификации
+                        </h3>
+                        <p class="text-sm text-white/90">
+                          Регулярное обучение новым техникам и методикам
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4 text-center">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
+                      Повышение квалификации
+                    </h3>
+                    <p class="text-sm text-gray-600">
+                      Регулярное обучение новым техникам и методикам
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quality Guarantee -->
+              <div
+                class="mt-16 bg-gradient-to-r from-purple-50 to-purple-100 rounded-2xl p-8 text-center"
+              >
+                <div
+                  class="w-16 h-16 flex items-center justify-center bg-purple-600 rounded-full mx-auto mb-4"
+                >
+                  <i class="ri-shield-check-line text-3xl text-white"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-3">
+                  Гарантия качества
+                </h3>
+                <p class="text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                  Все наши мастера прошли профессиональное обучение и имеют
+                  действующие сертификаты. Мы используем только
+                  сертифицированные материалы и оборудование, соответствующие
+                  всем стандартам безопасности. Ваше здоровье и красота — наш
+                  главный приоритет.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- Contacts Section -->
+        <div id="contacts">
+          <section
+            class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-white to-purple-50"
+          >
+            <div class="max-w-7xl mx-auto">
+              <!-- Header -->
+              <div class="text-center mb-16">
+                <h2
+                  class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent mb-4"
+                >
+                  Контакты
+                </h2>
+                <div
+                  class="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-400 mx-auto rounded-full mb-6"
+                ></div>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                  Мы всегда рады видеть вас в нашем салоне. Свяжитесь с нами
+                  удобным для вас способом.
+                </p>
+              </div>
+
+              <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                  <!-- Address -->
+                  <div
+                    class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  >
+                    <div class="flex items-start gap-6">
+                      <div
+                        class="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-600 to-purple-400 rounded-xl flex-shrink-0"
+                      >
+                        <i class="ri-map-pin-line text-2xl text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                          Адрес
+                        </h3>
+                        <p class="text-gray-700 text-lg">ГАГАРИНА 1</p>
+                        <p class="text-gray-600 text-sm mt-2">
+                          Удобное расположение в центре города
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div
+                    class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  >
+                    <div class="flex items-start gap-6">
+                      <div
+                        class="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-600 to-purple-400 rounded-xl flex-shrink-0"
+                      >
+                        <i class="ri-phone-line text-2xl text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                          Телефон
+                        </h3>
+                        <a
+                          href="tel:+79881899821"
+                          class="text-gray-700 text-lg hover:text-purple-600 transition-colors cursor-pointer"
+                        >
+                          +7(988) 189-98-21
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">
+                          Звоните с 9:00 до 21:00
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- WhatsApp -->
+                  <div
+                    class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  >
+                    <div class="flex items-start gap-6">
+                      <div
+                        class="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-green-500 to-green-400 rounded-xl flex-shrink-0"
+                      >
+                        <i class="ri-whatsapp-line text-2xl text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                          WhatsApp
+                        </h3>
+                        <a
+                          href="https://wa.me/79881899821"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-gray-700 text-lg hover:text-green-600 transition-colors cursor-pointer"
+                        >
+                          +7(988) 189-98-21
+                        </a>
+                        <p class="text-gray-600 text-sm mt-2">
+                          Быстрая запись через мессенджер
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Working Hours -->
+                  <div
+                    class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow"
+                  >
+                    <div class="flex items-start gap-6">
+                      <div
+                        class="w-14 h-14 flex items-center justify-center bg-gradient-to-br from-purple-600 to-purple-400 rounded-xl flex-shrink-0"
+                      >
+                        <i class="ri-time-line text-2xl text-white"></i>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">
+                          Режим работы
+                        </h3>
+                        <div class="space-y-1 text-gray-700">
+                          <p>Понедельник - Пятница: 9:00 - 21:00</p>
+                          <p>Суббота: 10:00 - 20:00</p>
+                          <p>Воскресенье: 10:00 - 18:00</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Booking Call-to-Action -->
+                  <div
+                    class="bg-gradient-to-r from-purple-600 to-purple-400 rounded-2xl shadow-lg p-8 text-white"
+                  >
+                    <h3 class="text-2xl font-bold mb-4">
+                      Запишитесь на процедуру
+                    </h3>
+                    <p class="mb-6 text-white/90">
+                      Позвоните нам или напишите в WhatsApp, и мы подберем
+                      удобное для вас время
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                      <a
+                        href="tel:+79881899821"
+                        class="px-6 py-3 bg-white text-purple-600 rounded-full font-semibold hover:bg-purple-50 transition-all shadow-lg whitespace-nowrap cursor-pointer inline-block"
+                      >
+                        <i class="ri-phone-line mr-2"></i>Позвонить
+                      </a>
+                      <a
+                        href="https://wa.me/79881899821"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="px-6 py-3 bg-green-500 text-white rounded-full font-semibold hover:bg-green-600 transition-all shadow-lg whitespace-nowrap cursor-pointer inline-block"
+                      >
+                        <i class="ri-whatsapp-line mr-2"></i>WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Map -->
+                <div class="lg:sticky lg:top-24">
+                  <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                    <div class="aspect-[4/3] w-full h-full">
+                      <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A..."
+                        width="100%"
+                        height="100%"
+                        frameborder="0"
+                      ></iframe>
+                    </div>
+                  </div>
+                  <div class="mt-6 text-center">
+                    <p class="text-gray-600 text-sm">
+                      <i class="ri-map-pin-line text-purple-600 mr-2"></i
+                      >ГАГАРИНА 1
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Floating WhatsApp Button -->
+        <a
+          href="https://wa.me/79881899821"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="fixed bottom-6 right-6 z-50 cursor-pointer"
+        >
+          <div class="relative">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300"
+            >
+              <i class="ri-whatsapp-line text-3xl text-white"></i>
+            </div>
+            <div
+              class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"
+            ></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>
