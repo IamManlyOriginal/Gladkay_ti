@@ -599,144 +599,139 @@
               </div>
               <!-- Certificates Grid -->
               <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Certificate 1 -->
-                <div class="group cursor-pointer">
-                  <div
-                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                <!-- Certificate -->
+                <div class="group">
+                  <!-- чекбокс для модалки -->
+                  <input type="checkbox" id="cert-1" class="hidden peer" />
+                  <!-- карточка -->
+                  <label
+                    for="cert-1"
+                    class="block cursor-pointer"
                   >
-                    <div class="aspect-[4/5] w-full h-full">
+                    <!-- изображение -->
+                    <div
+                      class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
+                    >
                       <img
+                        src="assets/images/cert-1.jpg"
                         alt="Сертификат по эпиляции"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        src="assets/images/cert-2.jpg"
+                        class="w-full h-auto object-contain bg-white p-4 group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-                    >
-                      <div class="p-6 text-white">
-                        <h3 class="text-lg font-bold mb-2">
-                          Сертификат по эпиляции
-                        </h3>
-                        <p class="text-sm text-white/90">
-                          Специализация по современным методам эпиляции
-                        </p>
-                      </div>
+                    <!-- текст снизу -->
+                    <div class="mt-4 text-center">
+                      <h3 class="text-lg font-semibold text-gray-800">
+                        Сертификат по эпиляции
+                      </h3>
+                      <p class="text-sm text-gray-600">
+                        Специализация по современным методам эпиляции
+                      </p>
                     </div>
-                  </div>
-                  <div class="mt-4 text-center">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
-                      Сертификат по эпиляции
-                    </h3>
-                    <p class="text-sm text-gray-600">
-                      Специализация по современным методам эпиляции
-                    </p>
+                  </label>
+                  <!-- модалка -->
+                  <div
+                    class="fixed inset-0 bg-black/80 hidden peer-checked:flex items-center justify-center z-50"
+                  >
+                    <label for="cert-1" class="absolute inset-0 cursor-zoom-out"></label>
+
+                    <img
+                      src="assets/images/cert-1.jpg"
+                      alt="Сертификат по эпиляции"
+                      class="max-w-[95vw] max-h-[95vh] object-contain rounded-xl shadow-2xl bg-white p-4"
+                    />
                   </div>
                 </div>
-                <!-- Certificate 2 -->
-                <div class="group cursor-pointer">
-                  <div
-                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                  >
-                    <div class="aspect-[4/5] w-full h-full">
-                      <img
-                        alt="Документ о регистрации оборудования"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        src="assets/images/sert-RKN.jpg"
-                      />
-                    </div>
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-                    >
-                      <div class="p-6 text-white">
-                        <h3 class="text-lg font-bold mb-2">
+                  <!-- Certificate 2 -->
+                  <div class="group">
+                    <!-- чекбокс для модалки -->
+                    <input type="checkbox" id="cert-2" class="hidden peer" />
+                    <!-- карточка -->
+                    <label for="cert-2" class="block cursor-pointer">
+                      <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                        <div class="aspect-[4/5] w-full h-full">
+                          <img
+                            alt="Документ о регистрации оборудования"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            src="assets/images/sert-RKN.jpg"
+                          />
+                        </div>
+                      </div>
+                      <div class="mt-4 text-center">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-1">
                           Документ о регистрации оборудования
                         </h3>
-                        <p class="text-sm text-white/90">
-                          Документ, подтверждающий регистрации оборудования
+                        <p class="text-sm text-gray-600">
+                          Документ, подтверждающий регистрацию оборудования
                         </p>
                       </div>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-center">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
-                      Документ о регистрации оборудования
-                    </h3>
-                    <p class="text-sm text-gray-600">
-                      Документ, подтверждающий регистрации оборудования
-                    </p>
-                  </div>
-                </div>
-                <!-- Certificate 3 -->
-                <div class="group cursor-pointer">
-                  <div
-                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                  >
-                    <div class="aspect-[4/5] w-full h-full">
-                      <img
-                        alt="Сертификат массажиста"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        src="assets/images/cert-3.jpg"
-                      />
-                    </div>
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-                    >
-                      <div class="p-6 text-white">
-                        <h3 class="text-lg font-bold mb-2">
-                          Сертификат 
-                        </h3>
-                        <p class="text-sm text-white/90">
-                          Квалификация 
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="mt-4 text-center">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
-                      Сертификат 
-                    </h3>
-                    <p class="text-sm text-gray-600">
-                      Квалификация 
-                    </p>
-                  </div>
-                </div>
+                    </label>
 
-                <!-- Certificate 4 -->
-                <div class="group cursor-pointer">
-                  <div
-                    class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
-                  >
-                    <div class="aspect-[4/5] w-full h-full">
+                    <!-- модалка -->
+                    <div class="fixed inset-0 bg-black/80 hidden peer-checked:flex items-center justify-center z-50">
+                      <label for="cert-2" class="absolute inset-0 cursor-zoom-out"></label>
+
                       <img
-                        alt="Повышение квалификации"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                        src="assets/images/cert-4.jpg"
+                        src="assets/images/sert-RKN.jpg"
+                        alt="Документ о регистрации оборудования"
+                        class="max-w-[95vw] max-h-[95vh] object-contain rounded-xl shadow-2xl bg-white p-4"
                       />
                     </div>
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-purple-900/90 via-purple-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
-                    >
-                      <div class="p-6 text-white">
-                        <h3 class="text-lg font-bold mb-2">
-                          Повышение квалификации
-                        </h3>
-                        <p class="text-sm text-white/90">
-                          Регулярное обучение новым техникам и методикам
-                        </p>
+                  </div>
+                  <!-- Certificate 3 -->
+                    <div class="group">
+                      <input type="checkbox" id="cert-3" class="hidden peer" />
+                      <label for="cert-3" class="block cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                          <div class="aspect-[4/5] w-full h-full">
+                            <img
+                              alt="Сертификат массажиста"
+                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                              src="assets/images/cert-3.jpg"
+                            />
+                          </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                          <h3 class="text-lg font-semibold text-gray-800 mb-1">Сертификат</h3>
+                          <p class="text-sm text-gray-600">Квалификация</p>
+                        </div>
+                      </label>
+                      <div class="fixed inset-0 bg-black/80 hidden peer-checked:flex items-center justify-center z-50">
+                        <label for="cert-3" class="absolute inset-0 cursor-zoom-out"></label>
+                        <img
+                          src="assets/images/cert-3.jpg"
+                          alt="Сертификат массажиста"
+                          class="max-w-[95vw] max-h-[95vh] object-contain rounded-xl shadow-2xl bg-white p-4"
+                        />
+                      </div>
+                    </div>
+                    <!-- Certificate 4 -->
+                    <div class="group">
+                      <input type="checkbox" id="cert-4" class="hidden peer" />
+                      <label for="cert-4" class="block cursor-pointer">
+                        <div class="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                          <div class="aspect-[4/5] w-full h-full">
+                            <img
+                              alt="Повышение квалификации"
+                              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                              src="assets/images/cert-4.jpg"
+                            />
+                          </div>
+                        </div>
+                        <div class="mt-4 text-center">
+                          <h3 class="text-lg font-semibold text-gray-800 mb-1">Повышение квалификации</h3>
+                          <p class="text-sm text-gray-600">Регулярное обучение новым техникам и методикам</p>
+                        </div>
+                      </label>
+                      <div class="fixed inset-0 bg-black/80 hidden peer-checked:flex items-center justify-center z-50">
+                        <label for="cert-4" class="absolute inset-0 cursor-zoom-out"></label>
+                        <img
+                          src="assets/images/cert-4.jpg"
+                          alt="Повышение квалификации"
+                          class="max-w-[95vw] max-h-[95vh] object-contain rounded-xl shadow-2xl bg-white p-4"
+                        />
                       </div>
                     </div>
                   </div>
-                  <div class="mt-4 text-center">
-                    <h3 class="text-lg font-semibold text-gray-800 mb-1">
-                      Повышение квалификации
-                    </h3>
-                    <p class="text-sm text-gray-600">
-                      Регулярное обучение новым техникам и методикам
-                    </p>
-                  </div>
-                </div>
-              </div>
 
               <!-- Quality Guarantee -->
               <div
